@@ -44,8 +44,8 @@ class Song
 
   def self.artist_count
     count = {}
-    self.artists.each do |artist|
-      count[artist] = @@artists.select(artist).length
+    self.artists.each do |unique_artist|
+      count[unique_artist] = @@artists.select {|artist| unique_artist == artist}.length
     end
     count
   end
