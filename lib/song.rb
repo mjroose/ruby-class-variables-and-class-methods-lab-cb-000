@@ -26,4 +26,11 @@ class Song
     @@count
   end
 
+  def self.artists
+    unique_artists = []
+    @artists.each do |artist|
+      unique_artists << artist if !unique_artists.include(artist)
+    end
+    unique_artists
+  end
 end
