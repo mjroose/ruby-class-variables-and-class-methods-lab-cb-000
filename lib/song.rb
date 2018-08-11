@@ -10,6 +10,11 @@ class Song
     @@artists << artist # if !!@@artists.include?(artist)
   end
 
+  def genre=(genre)
+    @genre = genre
+    @@genres << genre
+  end
+
   def initialize(name, artist, genre)
     @name = name
     self.artist = artist
